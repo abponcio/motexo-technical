@@ -4,7 +4,7 @@ export const storyShots = [
   { name: 'Power', time: 5.2, start: 3.8, end: 8.7, title: ['Order in', 'every detail.'], text: 'Electrical work, thoughtfully routed. From the first connection to the finishing detail.', service: 'electrical' },
   { name: 'Connect', time: 9.6, start: 8.7, end: 11.5, title: ['A better', 'connection.'], text: 'IT and networking that brings your workspace together. Clean routes. Considered connections.', service: 'networking' },
   { name: 'The space', time: 14.1, start: 11.5, end: 15.9, title: ['See the', 'whole picture.'], text: 'An office taking shape. A warehouse getting to work. Practical services, considered together.', service: 'spaces' },
-  { name: 'The occasion', time: 18.7, start: 15.9, end: 20, title: ['Behind the', 'big moment.'], text: 'The technical work behind an event. Power, connectivity and care where it counts.', service: 'events' },
+  { name: 'The event', time: 18.7, start: 15.9, end: 20, title: ['Behind the', 'big moment.'], text: 'The technical work behind an event. Power, connectivity and care where it counts.', service: 'events' },
 ] as const;
 export function chapterAt(time: number) {
   const index = storyShots.findIndex(shot => time < shot.end);

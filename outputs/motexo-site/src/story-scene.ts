@@ -11,7 +11,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 export type StoryRig = { x: number; y: number; z: number; tx: number; ty: number; tz: number; phase: number; power: number; door: number; travel: number; night: number; flight: number; fov: number; roll: number };
 export const openingRig: StoryRig = { x: -1.6, y: 10.4, z: 16.8, tx: .6, ty: 9, tz: 0, phase: 0, power: 0, door: 0, travel: 0, night: 0, flight: 0, fov: 40, roll: 0 };
 
-export async function createStoryScene(host: HTMLElement, markers: HTMLElement[]) {
+export async function createStoryScene(host: HTMLElement, markers: HTMLElement[], switchTarget: HTMLButtonElement) {
   const asset = await new GLTFLoader().loadAsync('/assets/motexo-craft.glb');
   asset.scene.traverse(object => {
     if (!(object instanceof T.Mesh)) return;
@@ -59,6 +59,7 @@ export async function createStoryScene(host: HTMLElement, markers: HTMLElement[]
     composer.addPass(beauty); composer.addPass(contact); composer.addPass(output);
     cleanups.push(() => { contact.dispose(); output.dispose(); });
     const rig = { ...openingRig }, point = new T.Vector3(), red = new T.Color(0xb9110c), pale = new T.Color(0xd9dcd9), dark = new T.Color(0x101c2b);
+    const switchBounds = new T.Box3(), switchPoint = new T.Vector3();
     const routeHead = new T.Vector3(), routeAhead = new T.Vector3(), chase = new T.Vector3(), look = new T.Vector3();
     let disposed = false, visible = true, mobile = false, contextLost = false, viewportWidth = 1, viewportHeight = 1;
     function render() {
@@ -100,6 +101,22 @@ export async function createStoryScene(host: HTMLElement, markers: HTMLElement[]
       contact.updateGtaoMaterial({ radius: .32 + warehouse * .55 });
       renderer.info.reset(); renderer.shadowMap.needsUpdate = true; composer.render(0);
       host.dataset.frameDraws = String(renderer.info.render.calls); host.dataset.frameTriangles = String(renderer.info.render.triangles);
+      switchTarget.hidden = rig.phase > .1;
+      switchTarget.setAttribute('aria-pressed', String(rig.power >= .5));
+      switchTarget.setAttribute('aria-label', rig.power >= .5 ? 'Switch off and return to the start' : 'Switch on and follow the story');
+      if (!switchTarget.hidden) {
+        switchBounds.setFromObject(model.rocker);
+        let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;
+        for (const x of [switchBounds.min.x, switchBounds.max.x]) for (const y of [switchBounds.min.y, switchBounds.max.y]) for (const z of [switchBounds.min.z, switchBounds.max.z]) {
+          switchPoint.set(x, y, z).project(camera);
+          const px = (switchPoint.x * .5 + .5) * viewportWidth, py = (-switchPoint.y * .5 + .5) * viewportHeight;
+          left = Math.min(left, px); right = Math.max(right, px); top = Math.min(top, py); bottom = Math.max(bottom, py);
+        }
+        switchTarget.style.left = `${(left + right) / 2}px`;
+        switchTarget.style.top = `${(top + bottom) / 2}px`;
+        switchTarget.style.width = `${Math.max(44, right - left)}px`;
+        switchTarget.style.height = `${Math.max(44, bottom - top)}px`;
+      }
       const occupied: { x: number; y: number }[] = [];
       model.anchors.forEach((anchor, i) => {
         if (!markers[i]) return;
