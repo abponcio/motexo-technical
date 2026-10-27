@@ -567,3 +567,21 @@
 .story-loader img { filter: brightness(0) invert(1); animation: motexo-loading 1.6s linear infinite; }
 @keyframes motexo-loading { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .story-loader img { animation: none; } }
+
+.story-switch[aria-pressed="false"]::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1px solid #fff2e24d;
+  border-radius: 9px;
+  box-shadow: 0 0 18px #ffd8b84d, inset 0 0 10px #fff2e226;
+  pointer-events: none;
+  animation: switch-invitation 2.8s ease-in-out infinite;
+}
+@keyframes switch-invitation {
+  0%, 100% { opacity: .2; transform: scale(1); }
+  50% { opacity: .85; transform: scale(1.045); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-switch[aria-pressed="false"]::after { animation: none; opacity: .5; }
+}
