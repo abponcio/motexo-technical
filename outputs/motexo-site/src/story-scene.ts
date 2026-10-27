@@ -1,3 +1,4 @@
+import { content } from './content';
 import * as T from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { buildServiceWorld } from './story-model';
@@ -103,7 +104,7 @@ export async function createStoryScene(host: HTMLElement, markers: HTMLElement[]
       host.dataset.frameDraws = String(renderer.info.render.calls); host.dataset.frameTriangles = String(renderer.info.render.triangles);
       switchTarget.hidden = rig.phase > .1;
       switchTarget.setAttribute('aria-pressed', String(rig.power >= .5));
-      switchTarget.setAttribute('aria-label', rig.power >= .5 ? 'Switch off and return to the start' : 'Switch on and follow the story');
+      switchTarget.setAttribute('aria-label', rig.power >= .5 ? content.story.switchOff : content.story.switchOn);
       if (!switchTarget.hidden) {
         switchBounds.setFromObject(model.rocker);
         let left = Infinity, top = Infinity, right = -Infinity, bottom = -Infinity;

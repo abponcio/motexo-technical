@@ -1,3 +1,4 @@
+import { resolveContent } from './content-module.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -6,7 +7,7 @@ import { Vector3, Box3, TextureLoader, Texture } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const compile = async file => (await transformWithOxc(await readFile(new URL(file, import.meta.url), 'utf8'), file)).code;
 const url = source => 'data:text/javascript;base64,' + Buffer.from(source).toString('base64');
-const story = await import(url(await compile('../src/story.ts')));
+const story = await import(url(resolveContent(await compile('../src/story.ts'))));
 const modelSource = (await compile('../src/story-model.ts')).replaceAll(/from\s*["'](three(?:\/[^"']*)?)["']/g, (_, path) => 'from ' + JSON.stringify(import.meta.resolve(path)));
 const { buildServiceWorld } = await import(url(modelSource));
 const textureSource = (await compile('../src/material-textures.ts')).replace(/from ["']three["']/, 'from ' + JSON.stringify(import.meta.resolve('three')));

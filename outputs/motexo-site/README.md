@@ -11,6 +11,8 @@ NODE_OPTIONS=--max-old-space-size=512 npm run preview
 
 Preview:http://127.0.0.1:5187/. Routes:`/`,`/expertise/`,`/work/`,`/contact/`.
 
+**Content editors:** edit [content.json](./content.json); see [CONTENT-EDITING.md](./CONTENT-EDITING.md) for the GitHub workflow and field guide.
+
 Vercel builds this directory using the committed vercel.json and the repository's main branch. No environment variables are required. See the repository root README for deployment details.
 
 `Hero.tsx` drives the deterministic scroll clock; `camera-score.ts` interpolates camera poses; `story-model.ts` builds the service world; `story-scene.ts` loads the authored GLB, applies lighting/materials and follows the travelling light. The window.__timelines['motexo-hero-scroll'] composition supports hf-seek events with {time}. HyperFrames Animation's deterministic composition pattern is used; a video renderer is not running.

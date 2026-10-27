@@ -1,0 +1,370 @@
+{
+  "$schema": "./content.schema.json",
+  "business": {
+    "name": "Motexo",
+    "fullName": "Motexo Technical and Cleaning Services",
+    "phone": "+971 52 962 8748",
+    "whatsappNumber": "971529628748",
+    "instagram": "https://www.instagram.com/motexotechnicalservices/",
+    "address": "Port Saeed, Deira\nDubai, United Arab Emirates"
+  },
+  "meta": {
+    "home": {
+      "title": "Motexo | Built right. Wired clean.",
+      "description": "Electrical, IT and network infrastructure for offices, warehouses and event spaces. Discover the care behind Motexo's technical work in Dubai."
+    },
+    "expertise": {
+      "title": "Expertise | Motexo",
+      "description": "Explore electrical, IT, network and practical technical work for offices, warehouses and event spaces."
+    },
+    "work": {
+      "title": "Our work | Motexo",
+      "description": "Explore the people, spaces and technical work shared by Motexo on Instagram."
+    },
+    "contact": {
+      "title": "Discuss your project | Motexo",
+      "description": "Prepare an enquiry for Motexo, review the details and continue in WhatsApp when you are ready."
+    }
+  },
+  "common": {
+    "home": "Home",
+    "homeLink": "Motexo home",
+    "discussProject": "Discuss your project",
+    "viewInstagram": "View Instagram",
+    "instagram": "Instagram",
+    "exploreService": "Explore {service}",
+    "loading": "Loading Motexo",
+    "close": "Close"
+  },
+  "navigation": {
+    "expertise": "Expertise",
+    "approach": "Our approach",
+    "work": "Work",
+    "contact": "Contact",
+    "mainLabel": "Main navigation",
+    "mobileLabel": "Mobile navigation",
+    "open": "Open navigation",
+    "close": "Close navigation",
+    "skip": "Skip to content"
+  },
+  "footer": {
+    "tagline": "Technical work.\nCare in the details.",
+    "explore": "Explore",
+    "work": "Our work",
+    "contact": "Let’s talk",
+    "location": "Based in Dubai",
+    "credit": "Built around the details."
+  },
+  "banner": {
+    "title": "Let’s get your\nspace working.",
+    "text": "Tell us what needs doing.\nStart a conversation about your project."
+  },
+  "story": {
+    "label": "A journey through Motexo’s technical services",
+    "chapters": {
+      "spark": {
+        "name": "The spark",
+        "title": [
+          "Built right.",
+          "Wired clean."
+        ],
+        "text": "Electrical, IT and network infrastructure for offices, warehouses and event spaces.",
+        "explore": "electrical works"
+      },
+      "power": {
+        "name": "Power",
+        "title": [
+          "Order in",
+          "every detail."
+        ],
+        "text": "Electrical work, thoughtfully routed. From the first connection to the finishing detail.",
+        "explore": "electrical works"
+      },
+      "connect": {
+        "name": "Connect",
+        "title": [
+          "A better",
+          "connection."
+        ],
+        "text": "IT and networking that brings your workspace together. Clean routes. Considered connections.",
+        "explore": "IT & networking"
+      },
+      "space": {
+        "name": "The space",
+        "title": [
+          "See the",
+          "whole picture."
+        ],
+        "text": "An office taking shape. A warehouse getting to work. Practical services, considered together.",
+        "explore": "office & warehouse"
+      },
+      "event": {
+        "name": "The event",
+        "title": [
+          "Behind the",
+          "big moment."
+        ],
+        "text": "The technical work behind an event. Power, connectivity and care where it counts.",
+        "explore": "event support"
+      }
+    },
+    "switchOn": "Switch on and follow the story",
+    "switchOff": "Switch off and return to the start",
+    "markerGroup": "Illustrative venue infrastructure",
+    "cameraLabel": "CCTV camera location {number}",
+    "accessPointLabel": "Wi-Fi access point location {number}",
+    "cameraShort": "CCTV",
+    "accessPointShort": "Wi-Fi AP",
+    "cameraTitle": "CCTV placement",
+    "cameraText": "An illustrative view of camera positions around the venue.",
+    "accessPointTitle": "Wireless access points",
+    "accessPointText": "An illustrative view of connectivity across the venue.",
+    "closeDetail": "Close infrastructure detail",
+    "jumpLabel": "Jump to a service scene",
+    "scroll": "Scroll to follow the story",
+    "failed": "Explore our services below",
+    "preparing": "Preparing the scene…",
+    "loading": "Loading the Motexo story…",
+    "realWork": "See the real work"
+  },
+  "expertise": {
+    "title": "What your\nspace needs.",
+    "text": "Practical technical support for the spaces your business depends on.",
+    "chooseLabel": "Choose an area of expertise",
+    "existingTitle": "Already have an installation?",
+    "existingText": "Let’s talk about what needs improving.",
+    "illustrationCaption": "Illustrative installation",
+    "sourceCaption": "From Motexo’s social archive"
+  },
+  "services": {
+    "electrical": {
+      "name": "Electrical works",
+      "short": "Electrical",
+      "headline": "Care in every connection.",
+      "description": "Electrical installation and improvements for the places your business depends on.",
+      "topics": [
+        "Electrical installations",
+        "Cable organization",
+        "Practical improvements"
+      ],
+      "image": "electrical-detail.webp",
+      "alt": "Illustrative electrical installation with neatly organized cable containment",
+      "illustrative": true
+    },
+    "networking": {
+      "name": "IT & networking",
+      "short": "IT & networking",
+      "headline": "Connections worth getting right.",
+      "description": "From data points to organized racks, start with the connections your space needs.",
+      "topics": [
+        "Data cabling",
+        "Rack organization",
+        "Workspace connectivity"
+      ],
+      "image": "rack-hero.webp",
+      "alt": "Illustrative black network rack with carefully organized red patch leads",
+      "illustrative": true
+    },
+    "spaces": {
+      "name": "Office & warehouse",
+      "short": "Office & warehouse",
+      "headline": "Built around your space.",
+      "description": "Practical technical work for an office taking shape, a warehouse changing, or an existing space that needs attention.",
+      "topics": [
+        "Office improvements",
+        "Warehouse requirements",
+        "Existing installations"
+      ],
+      "image": "interior-work.jpg",
+      "alt": "Motexo social collage showing interior work in progress and installation work",
+      "illustrative": false,
+      "source": "https://www.instagram.com/motexotechnicalservices/p/CPF6zZyFbgt/"
+    },
+    "events": {
+      "name": "Event support",
+      "short": "Event support",
+      "headline": "The work behind the occasion.",
+      "description": "Talk through the technical and on-site work your event space needs, from the first setup to the finishing details.",
+      "topics": [
+        "Event-space requirements",
+        "On-site technical work",
+        "Setup and organization"
+      ],
+      "image": "tennis-event.jpg",
+      "alt": "Motexo social collage of technicians working with cables at a tennis venue",
+      "illustrative": false,
+      "source": "https://www.instagram.com/motexotechnicalservices/p/CPF4tS3lqcO/"
+    }
+  },
+  "gallery": {
+    "title": "On site.\nIn the details.",
+    "text": "The real people. The practical work.\nShared by Motexo, from site to site.",
+    "filterLabel": "Filter work",
+    "filters": {
+      "all": "All work",
+      "infrastructure": "Electrical & infrastructure",
+      "spaces": "Spaces & interiors",
+      "events": "Events"
+    },
+    "imageCount": "{count} work image shown.",
+    "imagesCount": "{count} work images shown.",
+    "enlarge": "Enlarge {title}",
+    "imageAlt": "{title}, original collage shared by Motexo",
+    "closePhoto": "Close photo",
+    "sourceCaption": "From Motexo’s social archive.",
+    "originalPost": "View original post",
+    "endText": "See more of the work shared by the team.",
+    "explore": "Explore our work",
+    "archiveNote": "Original social collages, shared in 2021. Some include architectural renderings alongside work photographs.",
+    "items": [
+      {
+        "id": "tennis",
+        "title": "Tennis-event setup",
+        "category": "events",
+        "image": "tennis-event.jpg",
+        "width": 546,
+        "height": 640,
+        "description": "Cable work, setup and the people behind the occasion.",
+        "source": "https://www.instagram.com/motexotechnicalservices/p/CPF4tS3lqcO/"
+      },
+      {
+        "id": "infrastructure",
+        "title": "Electrical & infrastructure",
+        "category": "infrastructure",
+        "image": "infrastructure.jpg",
+        "width": 640,
+        "height": 640,
+        "description": "A closer look at installations and work in progress.",
+        "source": "https://www.instagram.com/motexotechnicalservices/p/CPF3JQ3FuO6/"
+      },
+      {
+        "id": "interiors",
+        "title": "Interior works",
+        "category": "spaces",
+        "image": "interior-work.jpg",
+        "width": 627,
+        "height": 640,
+        "description": "Practical work as commercial spaces take shape.",
+        "source": "https://www.instagram.com/motexotechnicalservices/p/CPF6zZyFbgt/"
+      },
+      {
+        "id": "team",
+        "title": "Work in progress",
+        "category": "spaces",
+        "image": "site-work.jpg",
+        "width": 556,
+        "height": 640,
+        "description": "People, technical details and spaces shared by the team.",
+        "source": "https://www.instagram.com/motexotechnicalservices/p/CPGASNvFIVM/"
+      }
+    ]
+  },
+  "approach": {
+    "title": "From the first look\nto the final detail.",
+    "text": "A useful place to start: your space, your requirements,\nand a conversation about the work.",
+    "steps": [
+      {
+        "title": "Understand the space",
+        "text": "Start with what you need, and what is already there."
+      },
+      {
+        "title": "Plan the work",
+        "text": "Talk through the requirements and practical next steps."
+      },
+      {
+        "title": "Install with care",
+        "text": "Keep the details and the organization in view."
+      },
+      {
+        "title": "Walk through the result",
+        "text": "Make space for the final details and your questions."
+      }
+    ],
+    "faqTitle": "A few practical questions.",
+    "faqs": [
+      {
+        "question": "Can we discuss an existing installation?",
+        "answer": "Yes. Tell us about the space, what is already there and what you would like to improve. The team can discuss the next steps with you."
+      },
+      {
+        "question": "What should I share about my project?",
+        "answer": "The type of space, the work you need, its location and your preferred timing are a useful starting point. You can add photos when you speak with the team."
+      },
+      {
+        "question": "Are the work photos from Motexo?",
+        "answer": "The work archive uses original collages shared on",
+        "linkText": "Motexo’s Instagram",
+        "afterLink": ". The scroll journey and service close-ups are illustrations used to explain the services."
+      }
+    ]
+  },
+  "pages": {
+    "expertise": {
+      "title": "Technical work.\nConsidered from every angle.",
+      "description": "Electrical, IT and network infrastructure for offices, warehouses and event spaces.\nExplore an area, then tell us what your space needs.",
+      "closingTitle": "Details that\nmake sense.",
+      "benefits": [
+        "Clear routes",
+        "Tidy connections",
+        "Considered finishes"
+      ]
+    },
+    "work": {
+      "title": "Work, in\nthe details.",
+      "description": "A closer look at the people, spaces and technical work shared by Motexo.",
+      "archiveLink": "From the Motexo Instagram archive"
+    }
+  },
+  "contact": {
+    "title": "Let’s get your\nspace working.",
+    "text": "Tell us what needs doing.\nWe’ll start with the details.",
+    "spacesText": "Offices. Warehouses.\nEvent spaces.",
+    "label": "Project enquiry",
+    "steps": [
+      "Your project",
+      "Review & send"
+    ],
+    "formTitle": "What can we help with?",
+    "serviceLabel": "Area of expertise",
+    "spaceLabel": "Your space",
+    "spaces": [
+      "Office",
+      "Warehouse",
+      "Event space",
+      "Other"
+    ],
+    "nameLabel": "Your name",
+    "contactLabel": "Email or phone",
+    "projectLabel": "Tell us about the project",
+    "projectPlaceholder": "What needs doing, and where?",
+    "projectHelp": "You’ll review your message before opening WhatsApp.",
+    "reviewButton": "Review enquiry",
+    "notSent": "No message has been sent.",
+    "reviewTitle": "One last look.",
+    "reviewText": "Here’s your draft. Open it in WhatsApp when you’re ready, then choose when to send.",
+    "draftLabel": "Your enquiry draft",
+    "continueButton": "Continue in WhatsApp",
+    "editButton": "Edit details",
+    "copyButton": "Copy draft",
+    "copied": "Draft copied. No message has been sent.",
+    "copyFailed": "Copy isn’t available here. Select the draft above to copy it manually.",
+    "draftStatus": "No message has been sent. Your draft stays in this page until you choose to share it.",
+    "errors": {
+      "name": "Add your name so the team knows who to speak to.",
+      "contactRequired": "Add an email address or phone number.",
+      "contactInvalid": "Use a complete email address or phone number, including its area code.",
+      "project": "Tell us a little about the work you need."
+    },
+    "message": {
+      "greeting": "Hello Motexo, I would like to discuss a project.",
+      "service": "Service",
+      "space": "Space",
+      "name": "Name",
+      "contact": "Contact"
+    }
+  },
+  "fallback": {
+    "text": "Electrical, IT and network infrastructure for offices, warehouses and event spaces in Dubai.",
+    "contact": "Contact Motexo on Instagram"
+  }
+}

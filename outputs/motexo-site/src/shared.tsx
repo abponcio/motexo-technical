@@ -1,15 +1,20 @@
-import { useEffect, useRef, useState } from 'react';
+import { content } from './content';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Check, InstagramLogo, Lightning, List, Network, Phone, Warehouse, X, CalendarDots } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { businessPhone, instagram, whatsappNumber } from './data';
+
+export function Lines({ text, desktop = false }: { text: string; desktop?: boolean }) {
+  return <>{text.split('\n').map((line, index) => <Fragment key={index}>{index > 0 && <>{desktop && ' '}<br className={desktop ? 'desktop-break' : undefined} /></>}{line}</Fragment>)}</>;
+}
 
 export const serviceIcons = { electrical: Lightning, networking: Network, spaces: Warehouse, events: CalendarDots };
 export function LinkButton({ href, children, className = '', external = false }: { href: string; children: ReactNode; className?: string; external?: boolean }) {
   return <a href={href} className={'button ' + className} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{children}</a>;
 }
 export function Logo({ full = false }: { full?: boolean }) {
-  return <span className={"logo " + (full ? "logo-full" : "logo-wordmark")}><img src="/assets/motexo-logo-full-enhanced.png" alt={full ? "Motexo Technical and Cleaning Services" : "Motexo"} width="1983" height="793" /></span>;
+  return <span className={"logo " + (full ? "logo-full" : "logo-wordmark")}><img src="/assets/motexo-logo-full-enhanced.png" alt={full ? content.business.fullName : content.business.name} width="1983" height="793" /></span>;
 }
 
 export function Header({ page }: { page: string }) {
@@ -27,19 +32,19 @@ export function Header({ page }: { page: string }) {
     document.addEventListener('pointerdown', outside);
     return () => { document.removeEventListener('keydown', key); document.removeEventListener('pointerdown', outside); };
   }, [open]);
-  const links = [{ label: 'Expertise', href: '/expertise/', page: 'expertise' }, { label: 'Our approach', href: '/#approach', page: 'approach' }, { label: 'Work', href: '/work/', page: 'work' }, { label: 'Contact', href: '/contact/', page: 'contact' }];
+  const links = [{ label: content.navigation.expertise, href: '/expertise/', page: 'expertise' }, { label: content.navigation.approach, href: '/#approach', page: 'approach' }, { label: content.navigation.work, href: '/work/', page: 'work' }, { label: content.navigation.contact, href: '/contact/', page: 'contact' }];
   return <>
-    <a className="skip-link" href="#main">Skip to content</a>
+    <a className="skip-link" href="#main">{content.navigation.skip}</a>
     <header className="site-header" ref={headerRef}>
       <div className="header-inner">
-        <a href="/" className="brand" aria-label="Motexo home"><Logo /></a>
-        <nav aria-label="Main navigation" className="desktop-nav">{links.map(link => <a key={link.label} href={link.href} aria-current={page === link.page ? 'page' : undefined}>{link.label}</a>)}</nav>
-        <LinkButton href="/contact/" className="header-enquiry">Discuss your project</LinkButton>
-        <button ref={toggleRef} className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? <X size={28} /> : <List size={28} />}</button>
+        <a href="/" className="brand" aria-label={content.common.homeLink}><Logo /></a>
+        <nav aria-label={content.navigation.mainLabel} className="desktop-nav">{links.map(link => <a key={link.label} href={link.href} aria-current={page === link.page ? 'page' : undefined}>{link.label}</a>)}</nav>
+        <LinkButton href="/contact/" className="header-enquiry">{content.common.discussProject}</LinkButton>
+        <button ref={toggleRef} className="menu-toggle" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? content.navigation.close : content.navigation.open} onClick={() => setOpen(!open)}>{open ? <X size={28} /> : <List size={28} />}</button>
       </div>
-      <AnimatePresence>{open && <motion.nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation" initial={{ opacity: 0, y: reduce ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduce ? 0 : -6 }} transition={{ duration: reduce ? 0 : .18 }}>
+      <AnimatePresence>{open && <motion.nav id="mobile-nav" className="mobile-nav" aria-label={content.navigation.mobileLabel} initial={{ opacity: 0, y: reduce ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: reduce ? 0 : -6 }} transition={{ duration: reduce ? 0 : .18 }}>
         {links.map(link => <a key={link.label} href={link.href} aria-current={page === link.page ? 'page' : undefined} onClick={() => setOpen(false)}>{link.label}</a>)}
-        <LinkButton href="/contact/">Discuss your project</LinkButton>
+        <LinkButton href="/contact/">{content.common.discussProject}</LinkButton>
       </motion.nav>}</AnimatePresence>
     </header>
   </>;
@@ -48,19 +53,19 @@ export function Header({ page }: { page: string }) {
 export function Footer() {
   return <footer className="site-footer">
     <div className="footer-main container">
-      <div className="footer-brand"><a href="/" aria-label="Motexo home"><Logo full /></a><p>Technical work.<br />Care in the details.</p></div>
-      <div><h2>Explore</h2><a href="/expertise/">Expertise</a><a href="/#approach">Our approach</a><a href="/work/">Our work</a></div>
-      <div><h2>Let’s talk</h2><a href="/contact/">Discuss your project</a><a href={'tel:+' + whatsappNumber}><Phone size={17} aria-hidden="true" />{businessPhone}</a><a href={instagram} target="_blank" rel="noopener noreferrer"><InstagramLogo size={18} aria-hidden="true" />Instagram</a></div>
-      <div className="footer-location"><h2>Based in Dubai</h2><p>Port Saeed, Deira<br />Dubai, United Arab Emirates</p></div>
+      <div className="footer-brand"><a href="/" aria-label={content.common.homeLink}><Logo full /></a><p><Lines text={content.footer.tagline} /></p></div>
+      <div><h2>{content.footer.explore}</h2><a href="/expertise/">{content.navigation.expertise}</a><a href="/#approach">{content.navigation.approach}</a><a href="/work/">{content.footer.work}</a></div>
+      <div><h2>{content.footer.contact}</h2><a href="/contact/">{content.common.discussProject}</a><a href={'tel:+' + whatsappNumber}><Phone size={17} aria-hidden="true" />{businessPhone}</a><a href={instagram} target="_blank" rel="noopener noreferrer"><InstagramLogo size={18} aria-hidden="true" />{content.common.instagram}</a></div>
+      <div className="footer-location"><h2>{content.footer.location}</h2><p><Lines text={content.business.address} /></p></div>
     </div>
-    <div className="footer-bottom container"><span>© {new Date().getFullYear()} Motexo Technical and Cleaning Services</span><span>Built around the details.</span></div>
+    <div className="footer-bottom container"><span>© {new Date().getFullYear()} {content.business.fullName}</span><span>{content.footer.credit}</span></div>
   </footer>;
 }
 
 
 export function ContactBanner() {
   return <section className="contact-banner">
-    <div className="container contact-banner-inner"><div><h2>Let’s get your<br />space working.</h2><p>Tell us what needs doing.<br />Start a conversation about your project.</p><div className="banner-actions"><LinkButton href="/contact/" className="button-white">Discuss your project</LinkButton><a className="text-link" href={instagram} target="_blank" rel="noopener noreferrer">View Instagram</a></div></div></div>
+    <div className="container contact-banner-inner"><div><h2><Lines text={content.banner.title} /></h2><p><Lines text={content.banner.text} /></p><div className="banner-actions"><LinkButton href="/contact/" className="button-white">{content.common.discussProject}</LinkButton><a className="text-link" href={instagram} target="_blank" rel="noopener noreferrer">{content.common.viewInstagram}</a></div></div></div>
   </section>;
 }
 

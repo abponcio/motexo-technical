@@ -29,8 +29,10 @@ Routes: `/`, `/expertise/`, `/work/`, `/contact/`. Enquiries validate and prepar
 
 ## Assets and editing
 
+Edit [content.json](outputs/motexo-site/content.json) for website text, service/work entries, contact details and page metadata. See [the content editing guide](outputs/motexo-site/CONTENT-EDITING.md) for publishing from GitHub.
+
 See the site's `ASSETS.md`, `DESIGN.md` and `PRODUCT.md`, and the scene's `README.md`. The company mark and authentic social archive are distinct from generated illustrative materials/3D scenes. Original low-resolution social collages are preserved; the venue is illustrative, not an exact surveyed reconstruction.
 
-The20-second paused GSAP composition follows scroll; it has no idle animation loop. A live reduced-motion preference uses chapter views, and a skip link reaches the service content. WebGL/model failure retains the headline/contact path. Generated texture channels are artistic approximations, not calibrated scans.
+The20-second paused GSAP composition follows scroll; 3D rendering has no idle loop. The clickable switch has a subtle CSS pulse while off. A live reduced-motion preference uses chapter views. WebGL/model failure retains the headline/contact path. Generated texture channels are artistic approximations, not calibrated scans.
 
 A physical-device/Safari matrix remains to be completed. Vite currently reports large JavaScript chunks; 3D rendering is dynamically loaded.

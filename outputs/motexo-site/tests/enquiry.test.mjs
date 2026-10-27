@@ -1,3 +1,4 @@
+import { resolveContent } from './content-module.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
@@ -5,9 +6,9 @@ import { transformWithOxc } from 'vite';
 
 const compile = async path => (await transformWithOxc(await readFile(new URL(path, import.meta.url), 'utf8'), path)).code;
 const moduleUrl = code => 'data:text/javascript;base64,' + Buffer.from(code).toString('base64');
-const dataUrl = moduleUrl(await compile('../src/data.ts'));
+const dataUrl = moduleUrl(resolveContent(await compile('../src/data.ts')));
 const data = await import(dataUrl);
-const source = await compile('../src/enquiry.ts');
+const source = resolveContent(await compile('../src/enquiry.ts'));
 const dataImport = /from\s*["']\.\/data["']/;
 assert.ok(dataImport.test(source), 'Enquiry test must resolve the actual production data import');
 const { validateEnquiry, enquiryMessage, whatsappDraft } = await import(moduleUrl(source.replace(dataImport, 'from ' + JSON.stringify(dataUrl))));

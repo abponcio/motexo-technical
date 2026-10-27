@@ -1,3 +1,4 @@
+import { content, formatText } from './content';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -78,26 +79,26 @@ export default function Hero() {
     else seek(time);
   }
   const shot = storyShots[chapter];
-  return <section ref={root} className={'story-scroll ' + (ready ? 'story-ready' : '') + (failed ? ' story-failed' : '')} data-chapter={chapter} data-composition-id="motexo-hero-scroll" data-duration={storyDuration} aria-label="A journey through Motexo’s technical services">
+  return <section ref={root} className={'story-scroll ' + (ready ? 'story-ready' : '') + (failed ? ' story-failed' : '')} data-chapter={chapter} data-composition-id="motexo-hero-scroll" data-duration={storyDuration} aria-label={content.story.label}>
     <div className="story-stage" aria-busy={!ready && !failed}>
       <div className="story-poster" aria-hidden="true" />
       <div ref={host} className="story-canvas" aria-hidden="true" />
-      <button ref={switchTarget} className="story-switch" hidden disabled={!ready} aria-label="Switch on and follow the story" aria-pressed="false" onClick={toggleSwitch} />
+      <button ref={switchTarget} className="story-switch" hidden disabled={!ready} aria-label={content.story.switchOn} aria-pressed="false" onClick={toggleSwitch} />
       <div className="story-shade" aria-hidden="true" />
       {storyShots.map((item, index) => <div key={item.name} className={'story-copy story-copy-' + index} inert={(!ready && !failed) || chapter !== index || !copyVisible} aria-hidden={chapter !== index || !copyVisible}>
         {index === 0 ? <h1>{item.title[0]}<br />{item.title[1]}</h1> : <h2>{item.title[0]}<br />{item.title[1]}</h2>}
         <p>{item.text}</p>
-        {index === 0 ? <div className="story-actions"><LinkButton href="/contact/" className="button-white">Discuss your project</LinkButton></div> : <a className="text-link" href={'/expertise/?service=' + item.service}>Explore {index === 1 ? 'electrical works' : index === 2 ? 'IT & networking' : index === 3 ? 'office & warehouse' : 'event support'}</a>}
-        {index === 4 && <a className="story-real-work" href="/work/">See the real work</a>}
+        {index === 0 ? <div className="story-actions"><LinkButton href="/contact/" className="button-white">{content.common.discussProject}</LinkButton></div> : <a className="text-link" href={'/expertise/?service=' + item.service}>{formatText(content.common.exploreService, {service: item.explore})}</a>}
+        {index === 4 && <a className="story-real-work" href="/work/">{content.story.realWork}</a>}
       </div>)}
-      <div className="story-markers" aria-label="Illustrative venue infrastructure">{Array.from({ length: 5 }, (_, index) => <button key={index} ref={element => { markers.current[index] = element; }} hidden className="story-marker" aria-label={(index < 3 ? 'CCTV camera' : 'Wi-Fi access point') + ' location ' + (index + 1)} aria-pressed={annotation === index} onClick={() => setAnnotation(annotation === index ? null : index)}>
-        {index < 3 ? <SecurityCamera size={19} weight="light" aria-hidden="true" /> : <WifiHigh size={19} weight="light" aria-hidden="true" />}<span>{index < 3 ? 'CCTV' : 'Wi-Fi AP'}</span>
+      <div className="story-markers" aria-label={content.story.markerGroup}>{Array.from({ length: 5 }, (_, index) => <button key={index} ref={element => { markers.current[index] = element; }} hidden className="story-marker" aria-label={formatText(index < 3 ? content.story.cameraLabel : content.story.accessPointLabel, {number: index + 1})} aria-pressed={annotation === index} onClick={() => setAnnotation(annotation === index ? null : index)}>
+        {index < 3 ? <SecurityCamera size={19} weight="light" aria-hidden="true" /> : <WifiHigh size={19} weight="light" aria-hidden="true" />}<span>{index < 3 ? content.story.cameraShort : content.story.accessPointShort}</span>
       </button>)}</div>
-      {chapter === 4 && annotation !== null && <div className="story-annotation" role="status"><p>{annotation < 3 ? 'CCTV placement' : 'Wireless access points'}</p><span>{annotation < 3 ? 'An illustrative view of camera positions around the venue.' : 'An illustrative view of connectivity across the venue.'}</span><button onClick={() => setAnnotation(null)} aria-label="Close infrastructure detail">Close</button></div>}
+      {chapter === 4 && annotation !== null && <div className="story-annotation" role="status"><p>{annotation < 3 ? content.story.cameraTitle : content.story.accessPointTitle}</p><span>{annotation < 3 ? content.story.cameraText : content.story.accessPointText}</span><button onClick={() => setAnnotation(null)} aria-label={content.story.closeDetail}>{content.common.close}</button></div>}
       <div className="story-footer">
-        <div className="story-navigation"><nav aria-label="Jump to a service scene">{storyShots.map((item, index) => <button key={item.name} disabled={!ready} onClick={() => seek(item.time)} aria-current={chapter === index ? 'step' : undefined}><span>{item.name}</span></button>)}</nav><div className="story-progress" aria-hidden="true"><span /></div><div className="story-scroll-cue"><span className="scroll-track" aria-hidden="true"><span /></span><p>{ready ? 'Scroll to follow the story' : failed ? 'Explore our services below' : 'Preparing the scene…'}</p></div></div>
+        <div className="story-navigation"><nav aria-label={content.story.jumpLabel}>{storyShots.map((item, index) => <button key={item.name} disabled={!ready} onClick={() => seek(item.time)} aria-current={chapter === index ? 'step' : undefined}><span>{item.name}</span></button>)}</nav><div className="story-progress" aria-hidden="true"><span /></div><div className="story-scroll-cue"><span className="scroll-track" aria-hidden="true"><span /></span><p>{ready ? content.story.scroll : failed ? content.story.failed : content.story.preparing}</p></div></div>
       </div>
-      {!ready && !failed && <div className="story-loader" role="status"><img src="/assets/motexo-gear.png" alt="" width="72" height="72" /><span className="visually-hidden">Loading the Motexo story…</span></div>}
+      {!ready && !failed && <div className="story-loader" role="status"><img src="/assets/motexo-gear.png" alt="" width="72" height="72" /><span className="visually-hidden">{content.story.loading}</span></div>}
       <span className="visually-hidden" aria-live="polite">{shot.name}</span>
     </div>
   </section>;

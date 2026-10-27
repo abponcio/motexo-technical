@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#de2018" />
-    <meta name="description" content="Electrical, IT and network infrastructure for offices, warehouses and event spaces. Discover the care behind Motexo's technical work in Dubai." />
+    <meta name="description" content="{{meta.description}}" />
     <style>.site-boot{position:fixed;inset:0;z-index:1000;min-height:100svh;display:grid;place-items:center;background:#b9110c}.site-boot img{filter:brightness(0) invert(1);animation:motexo-boot 1.6s linear infinite}@keyframes motexo-boot{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.site-boot img{animation:none}}</style>
-    <title>Motexo | Built right. Wired clean.</title>
+    <title>{{meta.title}}</title>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </head>
   <body>
-    <div id="root"><div class="site-boot" role="status" aria-label="Loading Motexo"><img src="/assets/motexo-gear.png" alt="" width="72" height="72" /></div></div>
-    <noscript><style>.site-boot{display:none}</style><main><h1>Motexo Technical and Cleaning Services</h1><p>Electrical, IT and network infrastructure for offices, warehouses and event spaces in Dubai.</p><p><a href="https://www.instagram.com/motexotechnicalservices/">Contact Motexo on Instagram</a></p></main></noscript>
+    <div id="root"><div class="site-boot" role="status" aria-label="{{common.loading}}"><img src="/assets/motexo-gear.png" alt="" width="72" height="72" /></div></div>
+    <noscript><style>.site-boot{display:none}</style><main><h1>{{business.fullName}}</h1><p>{{fallback.text}}</p><p><a href="{{business.instagram}}">{{fallback.contact}}</a></p></main></noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
