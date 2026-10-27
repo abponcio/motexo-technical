@@ -1,0 +1,9 @@
+/*
+!/.gitignore
+!/README.md
+!/outputs/
+/outputs/*
+!/outputs/motexo-site/
+!/outputs/motexo-scene/
+/outputs/motexo-scene/*.blend1
+/outputs/motexo-scene/__pycache__/

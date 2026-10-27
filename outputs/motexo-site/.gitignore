@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.sites-runtime/
+.DS_Store
+.impeccable/review/
+.vercel/
+.openai/
+.env*
+!.env.example
+.impeccable/hook.cache.json
+.impeccable/config.json
+outputs/

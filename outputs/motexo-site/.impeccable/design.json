@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T05:14:34.980820+00:00",
+  "title": "Design System: Motexo",
+  "extensions": {
+    "colorMeta": {
+      "red": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "tonalRamp": [
+          "oklch(15% 0.232 29)",
+          "oklch(26% 0.232 29)",
+          "oklch(38% 0.232 29)",
+          "oklch(49% 0.232 29)",
+          "oklch(61% 0.232 29)",
+          "oklch(72% 0.232 29)",
+          "oklch(84% 0.232 29)",
+          "oklch(95% 0.232 29)"
+        ]
+      },
+      "red-hover": {
+        "role": "primary",
+        "displayName": "Deep Signal Red",
+        "tonalRamp": [
+          "oklch(15% 0.2 29)",
+          "oklch(26% 0.2 29)",
+          "oklch(38% 0.2 29)",
+          "oklch(49% 0.2 29)",
+          "oklch(61% 0.2 29)",
+          "oklch(72% 0.2 29)",
+          "oklch(84% 0.2 29)",
+          "oklch(95% 0.2 29)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.002 145)",
+          "oklch(26% 0.002 145)",
+          "oklch(38% 0.002 145)",
+          "oklch(49% 0.002 145)",
+          "oklch(61% 0.002 145)",
+          "oklch(72% 0.002 145)",
+          "oklch(84% 0.002 145)",
+          "oklch(95% 0.002 145)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.012 165)",
+          "oklch(26% 0.012 165)",
+          "oklch(38% 0.012 165)",
+          "oklch(49% 0.012 165)",
+          "oklch(61% 0.012 165)",
+          "oklch(72% 0.012 165)",
+          "oklch(84% 0.012 165)",
+          "oklch(95% 0.012 165)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.006 195)",
+          "oklch(26% 0.006 195)",
+          "oklch(38% 0.006 195)",
+          "oklch(49% 0.006 195)",
+          "oklch(61% 0.006 195)",
+          "oklch(72% 0.006 195)",
+          "oklch(84% 0.006 195)",
+          "oklch(95% 0.006 195)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "expertise-surface": {
+        "role": "neutral",
+        "displayName": "Warm Technical Surface",
+        "tonalRamp": [
+          "oklch(15% 0.008 100)",
+          "oklch(26% 0.008 100)",
+          "oklch(38% 0.008 100)",
+          "oklch(49% 0.008 100)",
+          "oklch(61% 0.008 100)",
+          "oklch(72% 0.008 100)",
+          "oklch(84% 0.008 100)",
+          "oklch(95% 0.008 100)"
+        ]
+      },
+      "approach-surface": {
+        "role": "neutral",
+        "displayName": "Approach Dark",
+        "tonalRamp": [
+          "oklch(15% 0.006 150)",
+          "oklch(26% 0.006 150)",
+          "oklch(38% 0.006 150)",
+          "oklch(49% 0.006 150)",
+          "oklch(61% 0.006 150)",
+          "oklch(72% 0.006 150)",
+          "oklch(84% 0.006 150)",
+          "oklch(95% 0.006 150)"
+        ]
+      },
+      "inverse-muted": {
+        "role": "neutral",
+        "displayName": "Inverse Muted",
+        "tonalRamp": [
+          "oklch(15% 0.009 150)",
+          "oklch(26% 0.009 150)",
+          "oklch(38% 0.009 150)",
+          "oklch(49% 0.009 150)",
+          "oklch(61% 0.009 150)",
+          "oklch(72% 0.009 150)",
+          "oklch(84% 0.009 150)",
+          "oklch(95% 0.009 150)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15% 0.012 220)",
+          "oklch(26% 0.012 220)",
+          "oklch(38% 0.012 220)",
+          "oklch(49% 0.012 220)",
+          "oklch(61% 0.012 220)",
+          "oklch(72% 0.012 220)",
+          "oklch(84% 0.012 220)",
+          "oklch(95% 0.012 220)"
+        ]
+      },
+      "field-error": {
+        "role": "primary",
+        "displayName": "Field Error",
+        "tonalRamp": [
+          "oklch(15% 0.17 28)",
+          "oklch(26% 0.17 28)",
+          "oklch(38% 0.17 28)",
+          "oklch(49% 0.17 28)",
+          "oklch(61% 0.17 28)",
+          "oklch(72% 0.17 28)",
+          "oklch(84% 0.17 28)",
+          "oklch(95% 0.17 28)"
+        ]
+      },
+      "selected-field": {
+        "role": "neutral",
+        "displayName": "Selected Field",
+        "tonalRamp": [
+          "oklch(15% 0.012 30)",
+          "oklch(26% 0.012 30)",
+          "oklch(38% 0.012 30)",
+          "oklch(49% 0.012 30)",
+          "oklch(61% 0.012 30)",
+          "oklch(72% 0.012 30)",
+          "oklch(84% 0.012 30)",
+          "oklch(95% 0.012 30)"
+        ]
+      },
+      "white-hover": {
+        "role": "neutral",
+        "displayName": "White Hover",
+        "tonalRamp": [
+          "oklch(15% 0.007 110)",
+          "oklch(26% 0.007 110)",
+          "oklch(38% 0.007 110)",
+          "oklch(49% 0.007 110)",
+          "oklch(61% 0.007 110)",
+          "oklch(72% 0.007 110)",
+          "oklch(84% 0.007 110)",
+          "oklch(95% 0.007 110)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Angular Hero",
+        "purpose": "Russo One hero opening."
+      },
+      "headline": {
+        "displayName": "Section Display",
+        "purpose": "Russo One primary section headings."
+      },
+      "title": {
+        "displayName": "Component Title",
+        "purpose": "Archivo service heading role; contextual headings vary."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "IBM Plex Sans service prose."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "IBM Plex Sans field labels and controls."
+      }
+    },
+    "shadows": [
+      {
+        "name": "photo-dialog",
+        "value": "0 24px 80px rgba(0, 0, 0, .24)",
+        "purpose": "Archive modal separation."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 16px 24px rgba(22, 31, 35, .08)",
+        "purpose": "Dropdown separation."
+      }
+    ],
+    "motion": {
+      "storyDuration": "20s",
+      "scrollScrub": "0.65s",
+      "runtime": "One paused GSAP timeline + on-demand Three.js; no HyperFrames video renderer",
+      "scrollDesktop": "820svh",
+      "scrollMobile": "720svh",
+      "skip": "Persistent native link to service section",
+      "reducedMotion": "Stable chapter seeks, direct controls, 500svh track",
+      "camera": "Switch macro/orbit \u2192 cable descent \u2192 network inspection \u2192 interior/wide warehouse crane \u2192 event sweep; FOV33\u201345 degrees"
+    },
+    "breakpoints": [
+      {
+        "name": "content-medium",
+        "value": "1180px"
+      },
+      {
+        "name": "red-layout-medium",
+        "value": "1100px"
+      },
+      {
+        "name": "navigation-collapse",
+        "value": "980px"
+      },
+      {
+        "name": "hero-mobile",
+        "value": "760px"
+      },
+      {
+        "name": "content-mobile",
+        "value": "720px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "374px"
+      },
+      {
+        "name": "short-desktop-height",
+        "value": "780px"
+      }
+    ],
+    "rendering": {
+      "geometry": "Blender GLB switch/warehouse with procedural infrastructure and venue",
+      "contact": "GTAO at70 percent CSS resolution",
+      "antialias": "4-sample composer targets",
+      "renderer": "On-demand, DPR capped1.25"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Default content action.",
+      "html": "<a class=\"ds-primary\" href=\"#project\">Discuss your project</a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 24px;border:1px solid transparent;border-radius:0;font:500 14px \"IBM Plex Sans\",sans-serif;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s;background:var(--ink,#111211);color:var(--white,#fff);}.ds-primary:hover{background:var(--red,#de2018);}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-white:focus-visible,.ds-header:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary content action.",
+      "html": "<a class=\"ds-outline\" href=\"#project\">Discuss your project</a>",
+      "css": ".ds-outline{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 24px;border:1px solid transparent;border-radius:0;font:500 14px \"IBM Plex Sans\",sans-serif;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s;background:transparent;color:var(--ink,#111211);border-color:#aab3b5;}.ds-outline:hover{background:var(--ink,#111211);color:white;border-color:var(--ink,#111211);}.ds-outline:active{transform:translateY(1px)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-white:focus-visible,.ds-header:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "White Button",
+      "kind": "button",
+      "refersTo": "button-white",
+      "description": "Reverse action used on the hero; contextual contact-banner hover is documented separately.",
+      "html": "<a class=\"ds-white\" href=\"#project\">Discuss your project</a>",
+      "css": ".ds-white{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 24px;border:1px solid transparent;border-radius:0;font:500 14px \"IBM Plex Sans\",sans-serif;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s;background:white;color:var(--ink,#111211);}.ds-white:hover{background:#e8eae5;color:var(--ink,#111211);}.ds-white:active{transform:translateY(1px)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-white:focus-visible,.ds-header:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "Header Enquiry",
+      "kind": "button",
+      "refersTo": "button-header",
+      "description": "Signal-red navigation action.",
+      "html": "<a class=\"ds-header\" href=\"#project\">Discuss your project</a>",
+      "css": ".ds-header{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 24px;border:1px solid transparent;border-radius:0;font:500 14px \"IBM Plex Sans\",sans-serif;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s;background:var(--red,#de2018);color:white;min-height:48px;padding-inline:26px;font-size:15px;}.ds-header:hover{background:var(--red-hover,#bb180f);}.ds-header:active{transform:translateY(1px)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-white:focus-visible,.ds-header:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "Enquiry Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Labeled input with independent focus and invalid states.",
+      "html": "<label class=\"ds-field\">Your name<input name=\"name\" placeholder=\"Your name\" required /></label>",
+      "css": ".ds-field{display:block;color:var(--ink,#111211);font:500 14px/1.5 \"IBM Plex Sans\",sans-serif}.ds-field input{display:block;width:100%;margin-top:8px;padding:13px 14px;border:1px solid #aeb9bf;border-radius:8px;background:white;color:var(--ink,#111211);caret-color:var(--red,#de2018);font:400 16px/1.5 \"IBM Plex Sans\",sans-serif}.ds-field input::placeholder{color:#657179;opacity:1}.ds-field input:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}.ds-field input[aria-invalid=\"true\"]{border-color:#ad241d}"
+    },
+    {
+      "name": "Archive Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Pill archive filter; selected state uses ink.",
+      "html": "<div class=\"ds-filters\"><button aria-pressed=\"true\">All work</button><button aria-pressed=\"false\">Event support</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:10px}.ds-filters button{min-height:44px;padding:10px 20px;border:1px solid #adb6ba;border-radius:999px;background:transparent;color:var(--ink,#111211);font:500 13px \"IBM Plex Sans\",sans-serif;cursor:pointer;transition:color .15s,background .15s,border-color .15s}.ds-filters button[aria-pressed=\"true\"]{background:var(--ink,#111211);border-color:var(--ink,#111211);color:white}.ds-filters button:hover:not([aria-pressed=\"true\"]){border-color:var(--ink,#111211);background:#e3e8e5}.ds-filters button:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "Desktop Navigation",
+      "kind": "nav",
+      "description": "Sentence-case links with active and hover underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#expertise\" aria-current=\"page\">Expertise</a><a href=\"#work\">Work</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;gap:28px;color:var(--ink,#111211);background:white;font:500 15px \"IBM Plex Sans\",sans-serif}.ds-nav a{position:relative;padding:12px 0;text-decoration:none;color:inherit}.ds-nav a::after{content:\"\";position:absolute;bottom:4px;left:0;right:100%;height:2px;background:var(--red,#de2018);transition:right .15s}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{right:0}.ds-nav a:focus-visible{outline:3px solid var(--ink,#111211);outline-offset:4px}"
+    },
+    {
+      "name": "Story Chapter Controls",
+      "kind": "custom",
+      "refersTo": "inspection-tab",
+      "description": "Underlined selectors seek the matching hero beat; this panel snippet demonstrates control styling only.",
+      "html": "<nav class=\"ds-story\" aria-label=\"Service scenes\"><button aria-current=\"step\">The spark</button><button>Power</button><button>Connect</button><button>The space</button><button>The occasion</button></nav>",
+      "css": ".ds-story{display:flex;gap:24px;background:#172125;padding:16px}.ds-story button{border:0;background:transparent;color:white;padding:12px 0;font:13px sans-serif}.ds-story button[aria-current]{text-decoration:underline;text-underline-offset:6px}.ds-story button:hover{text-decoration:underline}.ds-story button:focus-visible{outline:2px solid white;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Built right. Wired clean.",
+    "overview": "Signal red, pale architectural surfaces and graphite hardware express organized workmanship. Angular Russo One headlines support the existing wordmark. IBM Plex Sans keeps descriptions and controls readable. The approved continuation uses actual dimensional geometry and a camera journey through multiple services; the rack-only concept is superseded.",
+    "keyCharacteristics": [
+      "Saturated red, white, pale mineral walls and dark hardware.",
+      "Angular display lettering, open composition and square primary actions.",
+      "Scroll connects electrical work, networking, a warehouse and an event.",
+      "Illustrations explain services; authentic source photos provide the work archive."
+    ],
+    "rules": [
+      {
+        "name": "The Separate Systems Rule",
+        "body": "Electrical and data installations are distinct assemblies. The red motif links services visually; it is not a wiring diagram or proof that the spaces share a circuit or geographic site.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Brand Asset Rule",
+        "body": "Display type supports the existing logo artwork; it never replaces or redraws the wordmark.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do use the same enhanced raster artwork for the cropped header wordmark and full footer logo.",
+      "Do keep generated installation imagery visibly labeled illustrative.",
+      "Do preserve source photographs and their original context, including architectural renderings in the archive.",
+      "Do keep each animated property under one timeline owner and preserve keyboard access to the currently visible hero phase.",
+      "Do retain visible focus, required-field errors and the editable enquiry review before opening WhatsApp."
+    ],
+    "donts": [
+      "Don't substitute condensed Anton for the chosen angular main headline.",
+      "Don't add decorative cable-line backgrounds or diagonal promotional arrows to the selected direction.",
+      "Don't replace authentic work imagery with generated detail or infer contracts and outcomes from social collages.",
+      "Don't describe the enhanced raster logo as a certified vector master.",
+      "Don't imply that preparing or opening a WhatsApp draft sends a message."
+    ]
+  }
+}
