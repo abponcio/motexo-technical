@@ -29,7 +29,7 @@ test('draft preserves visitor text and URL-encodes it without a send action', ()
   assert.ok(message.endsWith(value.project));
   const url = new URL(whatsappDraft(message));
   assert.equal(url.origin, 'https://wa.me');
-  assert.equal(url.pathname, '/971529628748');
+  assert.equal(url.pathname, '/' + data.whatsappNumber);
   assert.equal(url.searchParams.get('text'), message);
   assert.equal([...url.searchParams].length, 1);
 });
@@ -42,4 +42,19 @@ test('service selection falls back safely and work filters preserve source recor
   assert.deepEqual(data.filterWork('events').map(item => item.id), ['tennis']);
   assert.deepEqual(data.filterWork('spaces').map(item => item.id), ['interiors', 'team']);
   for (const item of data.work) assert.ok(item.source.startsWith('https://www.instagram.com/motexotechnicalservices/p/'));
+});
+
+test('smart home automation is selectable and prepares a home enquiry for the configured number', () => {
+  const service = data.serviceById('automation');
+  assert.equal(service.id, 'automation');
+  assert.equal(service.name, 'Smart Home Automation');
+  assert.equal(data.services.length, 5);
+  const enquiry = { ...valid, service: service.id, space: 'Home', project: 'Please discuss automation for our home.' };
+  assert.deepEqual(validateEnquiry(enquiry), {});
+  const draft = enquiryMessage(enquiry);
+  assert.ok(draft.includes('Service: Smart Home Automation'));
+  assert.ok(draft.includes('Space: Home'));
+  const url = new URL(whatsappDraft(draft));
+  assert.equal(url.pathname, '/' + data.whatsappNumber);
+  assert.equal(url.searchParams.get('text'), draft);
 });

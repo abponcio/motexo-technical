@@ -15,7 +15,7 @@
     },
     "expertise": {
       "title": "Expertise | Motexo",
-      "description": "Explore electrical, IT, network and practical technical work for offices, warehouses and event spaces."
+      "description": "Explore electrical, IT, network, smart home automation and practical technical services for homes, offices, warehouses and event spaces."
     },
     "work": {
       "title": "Our work | Motexo",
@@ -165,6 +165,20 @@
       "alt": "Illustrative black network rack with carefully organized red patch leads",
       "illustrative": true
     },
+    "automation": {
+      "name": "Smart Home Automation",
+      "short": "Smart Home Automation",
+      "headline": "A home that works around you.",
+      "description": "Smart home automation tailored to the way you live. Talk to Motexo about connected controls and a setup that works for your home.",
+      "topics": [
+        "Connected home controls",
+        "Automation setup",
+        "Practical integration"
+      ],
+      "image": "electrical-detail.webp",
+      "alt": "Illustrative electrical installation with neatly organized cable containment",
+      "illustrative": true
+    },
     "spaces": {
       "name": "Office & warehouse",
       "short": "Office & warehouse",
@@ -301,7 +315,7 @@
   "pages": {
     "expertise": {
       "title": "Technical work.\nConsidered from every angle.",
-      "description": "Electrical, IT and network infrastructure for offices, warehouses and event spaces.\nExplore an area, then tell us what your space needs.",
+      "description": "Electrical, IT and network infrastructure, plus smart home automation.\nExplore an area, then tell us what your space needs.",
       "closingTitle": "Details that\nmake sense.",
       "benefits": [
         "Clear routes",
@@ -318,7 +332,7 @@
   "contact": {
     "title": "Let’s get your\nspace working.",
     "text": "Tell us what needs doing.\nWe’ll start with the details.",
-    "spacesText": "Offices. Warehouses.\nEvent spaces.",
+    "spacesText": "Homes. Offices.\nWarehouses. Event spaces.",
     "label": "Project enquiry",
     "steps": [
       "Your project",
@@ -330,6 +344,7 @@
     "spaces": [
       "Office",
       "Warehouse",
+      "Home",
       "Event space",
       "Other"
     ],

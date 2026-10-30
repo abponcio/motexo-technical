@@ -22,7 +22,7 @@ A single content file is an editing convention: repository write access also per
 | `common`, `navigation`, `footer`, `banner` | Shared labels and contact callouts |
 | `story.chapters` | Chapter names, two-line hero headings, descriptions and service-link text |
 | `story` | Switch labels, loading copy, chapter controls and venue annotations |
-| `expertise`, `services` | Service chooser and four service descriptions, topics, image filenames/alt text/source links |
+| `expertise`, `services` | Service chooser and five service descriptions, topics, image filenames/alt text/source links |
 | `gallery` | Heading, filters, captions and work entries |
 | `approach` | Process steps and FAQ entries |
 | `pages` | Expertise/work page introductions |
@@ -32,7 +32,7 @@ A single content file is an editing convention: repository write access also per
 ## Editing rules
 
 - Use plain text, not HTML. Write `\n` inside a string for a line break in headings and multiline copy. For story headings keep exactly two strings in `title`.
-- Keep the four service keys (`electrical`, `networking`, `spaces`, `events`) and the five chapter keys (`spark`, `power`, `connect`, `space`, `event`). They connect to routes, icons and scenes.
+- Keep the five service keys (`electrical`, `networking`, `automation`, `spaces`, `events`) and the five chapter keys (`spark`, `power`, `connect`, `space`, `event`). They connect to routes, icons and scenes.
 - Work entries need a unique `id`. `category` must be `infrastructure`, `spaces` or `events`. You can add/reorder work entries; the first two appear on the homepage.
 - Keep placeholders such as `{service}`, `{title}`, `{count}` and `{number}` unchanged. The website fills these in.
 - `business.whatsappNumber` uses country code and digits only; the displayed `phone` must contain the same digits. Both telephone and WhatsApp links use it.

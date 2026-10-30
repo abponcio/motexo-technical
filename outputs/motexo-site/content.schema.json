@@ -635,6 +635,7 @@
       "required": [
         "electrical",
         "networking",
+        "automation",
         "spaces",
         "events"
       ],
@@ -695,6 +696,61 @@
           }
         },
         "networking": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "short",
+            "headline",
+            "description",
+            "topics",
+            "image",
+            "alt",
+            "illustrative"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "short": {
+              "type": "string",
+              "minLength": 1
+            },
+            "headline": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "topics": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "image": {
+              "type": "string",
+              "minLength": 1
+            },
+            "alt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "illustrative": {
+              "type": "boolean"
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "automation": {
           "type": "object",
           "additionalProperties": false,
           "required": [

@@ -1,15 +1,15 @@
 import { content } from './content';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { Check, InstagramLogo, Lightning, List, Network, Phone, Warehouse, X, CalendarDots } from '@phosphor-icons/react';
+import { Check, InstagramLogo, Lightning, List, Network, Phone, Warehouse, X, CalendarDots, HouseLine } from '@phosphor-icons/react';
 import type { ReactNode } from 'react';
 import { businessPhone, instagram, whatsappNumber } from './data';
 
 export function Lines({ text, desktop = false }: { text: string; desktop?: boolean }) {
-  return <>{text.split('\n').map((line, index) => <Fragment key={index}>{index > 0 && <>{desktop && ' '}<br className={desktop ? 'desktop-break' : undefined} /></>}{line}</Fragment>)}</>;
+  return <>{text.split('\n').map((line, index) => <Fragment key={index}>{index > 0 && <>{' '}<br className={desktop ? 'desktop-break' : undefined} /></>}{line}</Fragment>)}</>;
 }
 
-export const serviceIcons = { electrical: Lightning, networking: Network, spaces: Warehouse, events: CalendarDots };
+export const serviceIcons = { electrical: Lightning, networking: Network, automation: HouseLine, spaces: Warehouse, events: CalendarDots };
 export function LinkButton({ href, children, className = '', external = false }: { href: string; children: ReactNode; className?: string; external?: boolean }) {
   return <a href={href} className={'button ' + className} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{children}</a>;
 }

@@ -1,10 +1,10 @@
 import { content } from './content';
-export type ServiceId = 'electrical' | 'networking' | 'spaces' | 'events';
+export type ServiceId = 'electrical' | 'networking' | 'automation' | 'spaces' | 'events';
 type Service = {
   id: ServiceId; name: string; short: string; headline: string; description: string;
   topics: string[]; image: string; alt: string; illustrative: boolean; source?: string;
 };
-export const services: Service[] = (['electrical', 'networking', 'spaces', 'events'] as const).map(id => ({ id, ...content.services[id] }));
+export const services: Service[] = (['electrical', 'networking', 'automation', 'spaces', 'events'] as const).map(id => ({ id, ...content.services[id] }));
 
 export function serviceById(id: string | null | undefined) {
   return services.find(service => service.id === id) ?? services[0];
